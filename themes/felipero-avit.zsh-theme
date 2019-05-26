@@ -1,4 +1,5 @@
 # AVIT ZSH Theme
+ZSH_THEME_RVM_PROMPT_OPTIONS="s u v g"
 
 # PROMPT='
 # $(_user_host)${_current_dir} $(git_prompt_info) $(_ruby_version)
@@ -10,7 +11,8 @@ PROMPT='${ret_status} $(_user_host) ${_current_dir}%{$reset_color%}$(git_prompt_
 PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
 
 # RPROMPT='%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status) %{$FG[008]%}$(ruby_prompt_info) $(nvm_prompt_info)%{$reset_color%} ${_return_status}%{$(echotc DO 1)%}'
-RPROMPT='$(_git_time_since_commit) $(git_prompt_status) %{$FG[008]%}$(ruby_prompt_info) $(nvm_prompt_info)%{$reset_color%} ${_return_status}'
+RPROMPT='$(_git_time_since_commit) $(git_prompt_status) %{$FG[008]%}$(ruby_prompt_info) $(nvm_prompt_info)[%T]%{$reset_color%} ${_return_status}'
+
 
 local _current_dir="%{$fg_bold[blue]%}%3~%{$reset_color%} "
 local _return_status="%{$fg_bold[red]%}%(?..⍉)%{$reset_color%}"
